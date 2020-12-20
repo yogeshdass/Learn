@@ -1,0 +1,38 @@
+Search problems
+===============
+initial state
+actions
+transition model
+goal test
+path cost function
+
+goal to find the optimal solution
+
+node
+----
+a data struct  that keeps track of 
+- state
+- parent (node that generated this node)
+- action (action applied to parent to get node)
+- path cost (from initial to node)
+
+Approch
+-----
+start with a frontier that contains the initial state
+start with an empty explored set of nodes
+repeat :
+  if frointier is empty , then no solution
+  remve a node from frointier
+  if node conatins goal state, return the solutiion
+  add the node to the explored set
+  expand  node, add resulting node to the frointier if they arent alredy in the frointer or the explored set
+
+how to design frointier
+-----------------------
+can be stack DS in LIFO manner (DFS depth first search)
+can be used  queue FIFO manner breadth first search(BFS)
+greedy BFS
+
+A* seach algo expands nodes with lowest value of g(n) +h(n)
+g(n) -> cost to reach node
+h(n) -> estimate cost to goal
